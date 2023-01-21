@@ -1,0 +1,210 @@
+:root {
+  font-family: 'Director';
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 400;
+
+  color-scheme: light dark; 
+
+  --primary: lavender;
+  --bg: midnightblue;
+  --highlight: yellowgreen;
+
+  color: var(--primary);
+  background-color: var(--bg);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --container-size: 1200px;
+}
+
+@font-face {
+  font-family: 'Basteleur';
+  font-style: normal;
+  font-weight: 400;
+  src: url(src/assets/fonts/Basteleur-Moonlight.woff2);
+}
+
+@font-face {
+  font-family: 'Sligoil';
+  /* font-style: bold;
+  font-weight: 600; */
+  src: url(src/assets/fonts/Sligoil.woff2);
+}
+
+@font-face {
+  font-family: 'Director';
+  font-style: light;
+  font-weight: 100;
+  src: url(src/assets/fonts/Director-Light.woff2);
+}
+
+@font-face {
+  font-family: 'Director';
+  font-style: regular;
+  font-weight: 400;
+  src: url(src/assets/fonts/Director-Regular.woff2);
+}
+
+@font-face {
+  font-family: 'Director';
+  font-style: bold;
+  font-weight: 800;
+  src: url(src/assets/fonts/Director-Bold.woff2);
+}
+
+
+body {
+  margin: 0;
+  display: flex;
+  min-height: 100vh;
+}
+
+main {
+  margin: 2rem;
+  max-width: var(--container-size);
+}
+
+button {
+  border: none;
+}
+
+button:hover {
+  background-color: var(--highlight);
+  color: white;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+input {
+  border: 1px solid var(--primary);
+}
+
+input[type="text"] {
+  margin-right: 1rem;
+  width: calc(0.5 * var(--container-size));
+}
+
+.todo-label {
+  margin-right: 1rem;
+  width: calc(0.75 * var(--container-size));
+}
+
+input[type="checkbox"] {
+  margin: 0;
+  margin-right: 0.5rem;
+  align-self: flex-start;
+}
+
+.flex {
+  margin-left: 0;
+  display: flex;
+}
+
+.flex.row {
+  justify-content: space-between;
+}
+
+.flex.item {
+  align-items: flex-start;
+}
+
+.btn__selected {
+  background-color: var(--highlight);
+}
+
+h1 {
+  font-family: 'Basteleur';
+  font-size: 5rem;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: lowercase;
+  display: inline;
+}
+
+.subheader {
+  align-items: center;
+  margin: 0.75rem 0;
+}
+h2 {
+  display: inline;
+  color: magenta;
+  font-size: 1.2rem;
+  font-style: bold;
+  font-weight: 800;
+  text-transform: uppercase;
+  float: right;
+  margin-left: 2rem;
+}
+
+.todo-list {
+  margin-top: 0.75rem;
+}
+
+.todo {
+  margin: 0.5rem 0;
+}
+.todo label {
+  text-transform: uppercase;
+  font-size: 1.35rem;
+}
+
+
+/* 
+
+.card {
+  padding: 2em;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+*/
+
+
+button {
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.25s;
+}
+.more-actions {
+  padding-top: 1.25rem;
+}
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+form .todo-label {
+  display: none;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --primary: midnightblue;
+    --bg: lavender;
+  }
+  a:hover {
+    color: darkolivegreen;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} 
