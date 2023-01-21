@@ -42,7 +42,9 @@
     todos
 
 
-  const checkAllTodos = (completed) => todos.forEach((td) => td.completed = completed);
+  const checkAllTodos = (completed) => {
+    todos = todos.map((t) => ({ ...t, completed }));
+  }
 
   const removeCompletedTodos = () => todos = todos.filter((td) => !td.completed);
 </script>

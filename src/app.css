@@ -96,6 +96,7 @@ input[type="text"] {
 .todo-label {
   margin-right: 1rem;
   width: calc(0.75 * var(--container-size));
+  word-wrap: break-word;
 }
 
 input[type="checkbox"] {
@@ -169,6 +170,10 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 */
+
+button:disabled {
+  pointer-events: none;
+}
 
 
 button {
